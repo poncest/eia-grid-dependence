@@ -117,10 +117,10 @@ data/        Cached intermediate tables (not tracked; rebuilt by the scripts)
 
 ## Reproducibility
 
-1. Register for a free EIA API key and store it in `.Renviron` (never commit it). The data-pull helper is `R/eia_api.R`. _TODO: confirm the variable name it reads._
+1. Register for a free EIA API key and store it in `.Renviron` as `EIA_API_KEY` (never commit it). The data-pull helper is `R/eia_api.R`, which stops with an error if the variable is not set.
 2. Run the scripts in `analysis/` in numeric order. Scripts 04, 07 and 08 pull from the API; 04 is resumable, so an interrupted run picks up where it left off.
 3. Packages used by scripts 01, 09, 10 and 13 include `tidyverse`, `here`, `fs`, `arrow`, `janitor`, `lubridate`, `sf`, `patchwork`, `ggtext`, `showtext` and `maps`. _TODO: add packages loaded by scripts 02-08, 11 and 12, or add `renv.lock`._
-4. Fonts (Big Shoulders, DM Sans, JetBrains Mono) are downloaded from Google Fonts at render time, so the final chart needs network access. The social-icon row also needs the Font Awesome brands font in `fonts/`.
+4. Fonts (Big Shoulders, DM Sans, JetBrains Mono) are downloaded from Google Fonts at render time, so the final chart needs network access. The social-icon row also needs the Font Awesome Free 6.6.0 brands font: download it from Font Awesome and place `Font Awesome 6 Brands-Regular-400.otf` in `fonts/6.6.0/` (the font files are not committed; without the file, `R/fonts.R` warns and the icon row is skipped).
 
 ## License and attribution
 

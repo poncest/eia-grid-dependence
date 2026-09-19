@@ -9,9 +9,16 @@
 .Ruserdata
 .DS_Store
 
-# --- Regenerable data (large; rebuilt by the analysis scripts (04, 07, 08 pull from the API)) ---
+# --- Regenerable data (large; rebuilt by the analysis scripts) ---
 data-raw/
 data/
+
+# --- Third-party geometry: never redistribute (Esri layer terms unconfirmed) ---
+*.gpkg
+*.shp
+
+# --- Font Awesome files (see README > Reproducibility for where to get them) ---
+fonts/
 
 # --- Quarto build artifacts ---
 /.quarto/
@@ -19,14 +26,7 @@ data/
 /_freeze/
 *_files/
 
-# Tracked on purpose: analysis/  R/  output/  figures/  README.md
-
-*.gpkg
-*.shp
-fonts/
+# --- Internal development artifact (generated column listing) ---
 docs/data_dictionary_skeleton.md
 
-*.gpkg
-*.shp
-fonts/
-docs/data_dictionary_skeleton.md
+# Tracked on purpose: analysis/  R/  output/  figures/  docs/  README.md
