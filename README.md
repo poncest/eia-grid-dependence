@@ -4,8 +4,8 @@
 
 ![Final chart: net import dependence during 2025 stress hours](figures/final_dependence_network.png)
 
-**Read the piece:** _TODO: link to published Quarto page_
-**Methodology and validation:** _TODO: link to methodology appendix_
+**Read the piece:** [post](https://stevenponce.netlify.app/projects/standalone_visualizations/sa_2026-09-19.html)
+**Definitions and validation results:** [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md) and the tables in [`output/`](output/)
 
 ---
 
@@ -43,7 +43,7 @@ The goal is to explore **grid interdependence under demand stress** and to ident
 
 *Corridor shares* are each neighbor's absolute contribution divided by the sum of all neighbors' absolute contributions. Contributions are computed on the signed net import ratio and approximately sum to the node's total; the gap is reported in `output/corridor_attribution_summary.csv`.
 
-Other candidates were investigated and reported honestly in the methodology page, including GCPD, a real flip that did not survive alternative stress thresholds and so is not a headline claim.
+Other candidates were investigated and are recorded in `output/candidate_verdicts.csv`. GCPD, PNM and PSCO showed exporter-to-importer flips that did not survive alternative stress thresholds, so none is a headline claim.
 
 ## Data sources
 
@@ -87,7 +87,7 @@ Source fields and the key analytical tables are documented in [`docs/DATA_DICTIO
 4. Screen candidates against explicit data-quality gates, then test an 8-node candidate registry on five axes: stress threshold (1%/5%/10%), named extreme-weather events, reconciliation scenarios, flow completeness and regional coherence. Each candidate receives one verdict.
 5. Decompose each validated finding into corridor contributions.
 
-Full detail lives in the methodology page.
+Formulas, gates and verdict rules are in [`docs/DATA_DICTIONARY.md`](docs/DATA_DICTIONARY.md); the scripts themselves are the full record.
 
 ## Assumptions and limitations
 

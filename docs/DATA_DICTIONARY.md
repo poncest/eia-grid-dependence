@@ -20,11 +20,12 @@ _TODO: confirm any additional cached columns (such as names and units) against t
 
 ## 2. Conventions and controlled vocabularies
 
-**Canonical pair ordering and direction.** Each connection is stored once as an alphabetically ordered pair (`ba_1` < `ba_2`, built with `pmin`/`pmax` of the reported codes). In the reconciled tables a signed value **≥ 0 means flow from `ba_1` to `ba_2`**; script 09 counts that flow as outgoing for `ba_1` and incoming for `ba_2`, and the reverse when negative. _TODO: add one sentence on the raw EIA sign convention from script 06 or `R/eia_api.R`._
+**Canonical pair ordering and direction.** Each connection is stored once as an alphabetically ordered pair (`ba_1` < `ba_2`, built with `pmin`/`pmax` of the reported codes). In the reconciled tables a signed value **≥ 0 means flow from `ba_1` to `ba_2`**; script 09 counts that flow as outgoing for `ba_1` and incoming for `ba_2`, and the reverse when negative. The conversion from the raw EIA sign to this canonical sign happens in script 05 (`canonical_value`). _TODO: add one sentence on the raw EIA convention from script 05._
 
 | Vocabulary | Values | Meaning |
 |---|---|---|
 | Entity class (05) | `balancing_authority`, `regional_aggregate`, `national_aggregate` | Classification of all 86 nodes |
+| Reconciliation scenario detail (06) | `lower_signed` = the smaller-magnitude of the two reports; `upper_signed` = the larger; `mid_signed` = their average | Single-report hours use that one report. A direction conflict (both reports nonzero with opposite signs) gives `NA` and the hour is excluded. |
 | Connection layer (06) | `ba_to_ba`, `region_to_region` | Separate networks, never combined |
 | Reconciliation scenario | `lower`, `mid`, `upper` | How disagreeing reciprocal reports are resolved |
 | Demand coverage (08) | `COMPLETE`, `NEAR_COMPLETE`, `NO_DEMAND_SERIES` | Node demand availability; the first two are usable |
@@ -69,7 +70,9 @@ Flags: `EVENT_VARIABLE` if the claim holds in fewer than 2 of the 3 named event 
 | `dependence_stratified_ba` (and `_region`) | 09 | A node × measure × scenario | `weighted_stress_value`, `weighted_normal_value`, `weighted_difference`, `retained_stress_weight`, `stress_observations`, `normal_observations`, `resolved_flow_coverage`, `positive_demand_coverage`, `claim_status` |
 | `robustness_*.csv` (five files) | 10 | A candidate under one test | Threshold sensitivity, named-event sensitivity, scenario survival, flow completeness and regional coherence, one file per axis |
 | `candidate_verdicts.csv` | 10 | A candidate | `node`, `candidate_role`, `primary_measure`, `baseline_holds`, `scenario_ok`, `threshold_ok`, `flow_ok`, `event_ok`, `near_coverage_gate`, `overall_status`, `robustness_flags` |
-| `corridor_attribution_*.csv` | 11 | A corridor (neighbor) of a validated node | _TODO: columns from script 11_ |
+| `corridor_attribution_{TPWR,SCL,AECI}.csv` | 11 | A corridor (neighbor) of one validated node, midpoint scenario | `node`, `counterparty`, `counterparty_name`, `eligible_strata`, `retained_weight`, `weighted_stress_value`, `weighted_normal_value`, `contribution` (stress minus normal, signed net import ratio, from the node's perspective: positive = import), `pct_of_net_change` (contribution ÷ signed corridor sum; can exceed 100% or be negative when corridors offset), `pct_of_absolute_change` (\|contribution\| ÷ sum of \|contribution\|; the concentration measure), `cumulative_pct_absolute` |
+| `corridor_attribution_summary.csv` | 11 | A validated node | `cached_total` (node total from script 09), `corridor_sum`, `gap`, `gap_pct_of_total`, `n_corridors`, `top1_corridor`, `top1_share_absolute`, `top3_share_absolute`, `classification` (`ONE_DOMINANT_CORRIDOR` if top share ≥ 50%; `SEVERAL_MEANINGFUL_CORRIDORS` if top three ≥ 80%; otherwise `BROADLY_DISTRIBUTED`) |
+| `corridor_attribution_scenario_consistency.csv` | 11 | A node × scenario | `leading_corridor`, `contribution`, `sign`: checks that the same corridor leads under lower, mid and upper |
 
 ## 5. Chart tables (`analysis/12`, `analysis/13`)
 
@@ -79,7 +82,7 @@ Arc tables drawn on the final chart (`nw_arcs`, `central_arcs`):
 |---|---|
 | `target` | The BA whose dependence changed (e.g., TPWR, SCL, AECI) |
 | `counterparty` | The neighboring BA on the other end of the corridor |
-| `contribution_pp` | That corridor's contribution to the stress-vs-normal change, in percentage points. Positive values increase dependence. |
+| `contribution_pp` | That corridor's contribution to the stress-vs-normal change in the target's signed net import ratio (midpoint scenario), in percentage points; corresponds to `contribution` × 100 in the corridor attribution tables. Positive values increase net imports. |
 | `direction` | `Driver (increases dependence/flip)` or `Countervailing (offsets it)`; drives color |
 | `lon_from`, `lat_from`, `lon_to`, `lat_to` | Schematic endpoints (BA anchor points), not transmission routes |
 
