@@ -1,0 +1,43 @@
+#' Get default theme colors
+#' @param palette Optional custom color palette
+#' @return List of theme colors
+get_theme_colors <- function(palette = NULL) {
+  list(
+    # Brand neutrals (Steven Ponce brand system v1.0, May 2026)
+    # Warm cream base replaces flat gray — pairs with burgundy anchor
+    background = "#F5F3EE", # --cream  (was #f9f9f9)
+    title      = "#2C2825", # --ink    (was gray20)
+    subtitle   = "#7A7068", # --stone  (was gray30)
+    text       = "#7A7068", # --stone  (was gray30)
+    caption    = "#7A7068", # --stone  (was gray40)
+    palette    = palette    # overridden weekly as before
+  )
+}
+
+#' Create base theme with consistent elements
+#' @param colors List of colors from get_theme_colors()
+#' @return ggplot theme object
+create_base_theme <- function(colors = get_theme_colors()) {
+  theme_minimal(base_size = 14, base_family = fonts$text) +
+    theme(
+      plot.title.position   = "plot",
+      plot.caption.position = "plot",
+      legend.position       = "plot",
+
+      plot.background  = element_rect(fill = colors$background, color = colors$background),
+      panel.background = element_rect(fill = colors$background, color = colors$background),
+
+      plot.margin = margin(t = 10, r = 20, b = 10, l = 20),
+
+      axis.text  = element_text(family = fonts$text, size = rel(0.79), color = colors$text),
+      axis.title = element_text(family = fonts$text, size = rel(0.93), face = "bold", color = colors$text)
+    )
+}
+
+#' Extend base theme with weekly customizations
+#' @param base_theme Existing theme to extend
+#' @param weekly_theme_elements List of theme elements specific to this week
+#' @return Modified ggplot theme
+extend_weekly_theme <- function(base_theme, weekly_theme_elements) {
+  base_theme + weekly_theme_elements
+}

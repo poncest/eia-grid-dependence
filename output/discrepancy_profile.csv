@@ -1,0 +1,2 @@
+sample_id,discrepancies,median_flow_mwh,pct_under_50_mwh,pct_under_100_mwh,median_report_spread,p95_report_spread,median_relative_spread,p95_relative_spread
+2025-07-15,644,409.75,0.17080745341614906,0.2608695652173913,216,825.7,0.31212614356087265,1.0622073929812506

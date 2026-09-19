@@ -1,0 +1,5 @@
+"node","name","layer","measure","scenario","weighted_stress_value","weighted_normal_value","weighted_difference","retained_stress_weight","positive_demand_coverage","resolved_flow_coverage","annual_demand_mwh","median_demand_mwh","maximum_demand_mwh"
+"GCPD","Public Utility District No. 2 of Grant County, Washington","ba","raw_net_import_ratio","mid",0.0240696098065253,-0.140025288012429,0.164094897818954,1,1,0.99851598173516,6739895,752,1053
+"AECI","Associated Electric Cooperative, Inc.","ba","raw_net_import_ratio","mid",0.0563107012939,-0.0762015529377894,0.132512254231689,1,1,0.979452054794521,22319643,2323.5,5758
+"PNM","Public Service Company of New Mexico","ba","raw_net_import_ratio","mid",0.011096679287263,-0.0666563063041334,0.0777529855913965,1,1,0.999885844748858,14616645,1619,2736
+"PSCO","Public Service Company of Colorado","ba","raw_net_import_ratio","mid",0.00710816266413588,-0.0220819330154717,0.0291900956796075,1,0.999315068493151,0.999429223744292,45250779,5008,9079

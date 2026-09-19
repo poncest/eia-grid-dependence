@@ -1,0 +1,3 @@
+"counterparty","eligible_strata","retained_weight","weighted_stress_value","weighted_normal_value","contribution","node","counterparty_name","pct_of_net_change","pct_of_absolute_change","cumulative_pct_absolute"
+"BPAT",20,1,0.743363435406228,0.626254666417782,0.117108768988446,"TPWR","Bonneville Power Administration",1.1377722948922,0.891989432595623,0.891989432595623
+"PSEI",20,1,-0.0931474617523124,-0.0789668177623242,-0.0141806439899882,"TPWR","Puget Sound Energy, Inc.",-0.137772294892195,0.108010567404377,1

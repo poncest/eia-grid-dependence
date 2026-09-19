@@ -1,0 +1,4 @@
+sample_id,expected_hours,complete,ba_1,ba_2,hours_reported
+2025-07-15,24,FALSE,CAN,CENT,6
+2025-07-15,24,FALSE,SPA,SWPP,6
+2025-07-15,24,FALSE,SPC,SWPP,6

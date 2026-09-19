@@ -1,0 +1,10 @@
+"code","centroid_inside_boundary","surface_point_inside_boundary"
+"AECI",TRUE,TRUE
+"BPAT",TRUE,TRUE
+"PSEI",FALSE,TRUE
+"SCL",TRUE,TRUE
+"SPA",TRUE,TRUE
+"TPWR",TRUE,TRUE
+"TVA",TRUE,TRUE
+"MISO",TRUE,TRUE
+"SWPP",TRUE,TRUE

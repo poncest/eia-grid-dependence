@@ -1,0 +1,2 @@
+"rows","distinct_hours","expected_hours","hours_coverage_pct","duplicate_rows","missing_values","status"
+8760,8760,8760,100,0,0,"COMPLETE"

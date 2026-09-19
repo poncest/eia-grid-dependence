@@ -1,0 +1,3 @@
+sample_id,observations,reciprocal_coverage,median_absolute_gap,p95_absolute_gap,within_5_percent
+2025-07-01,7917,0.9026146267525578,0,453,0.836272040302267
+2025-07-15,8003,0.9099087842059228,0,365,0.8231255149684152

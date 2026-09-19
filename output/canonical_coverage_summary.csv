@@ -1,0 +1,3 @@
+sample_id,observed_connections,complete_connections,incomplete_connections,coverage_rate,minimum_hours,median_hours,maximum_hours
+2025-07-01,181,181,0,1,24,24,24
+2025-07-15,184,181,3,0.9877717391304348,6,24,24

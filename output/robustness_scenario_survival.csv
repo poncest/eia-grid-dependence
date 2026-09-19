@@ -1,0 +1,17 @@
+"node","measure","scenarios_present","all_primary","dependence_increase_all_scenarios","crosses_all_scenarios","min_difference","survives"
+"AECI","net_import_dependence",3,TRUE,TRUE,NA,0.0426222209603027,TRUE
+"AECI","raw_net_import_ratio",3,TRUE,NA,TRUE,0.116499024802774,TRUE
+"GCPD","net_import_dependence",3,TRUE,TRUE,NA,0.0822294329321085,TRUE
+"GCPD","raw_net_import_ratio",3,TRUE,NA,TRUE,0.164073703758297,TRUE
+"NW","net_import_dependence",3,TRUE,TRUE,NA,0.000477080204034696,TRUE
+"NW","raw_net_import_ratio",3,TRUE,NA,FALSE,0.00556740244857336,FALSE
+"PNM","net_import_dependence",3,TRUE,TRUE,NA,0.0184199766207703,TRUE
+"PNM","raw_net_import_ratio",3,TRUE,NA,TRUE,0.0776934378663092,TRUE
+"PSCO","net_import_dependence",3,TRUE,TRUE,NA,0.0177093599684327,TRUE
+"PSCO","raw_net_import_ratio",3,TRUE,NA,TRUE,0.0291885350358864,TRUE
+"SCL","net_import_dependence",3,TRUE,TRUE,NA,0.085819943406027,TRUE
+"SCL","raw_net_import_ratio",3,TRUE,NA,FALSE,0.085819943406027,FALSE
+"TPWR","net_import_dependence",3,TRUE,TRUE,NA,0.101430271703803,TRUE
+"TPWR","raw_net_import_ratio",3,TRUE,NA,FALSE,0.101430271703803,FALSE
+"TVA","net_import_dependence",3,TRUE,TRUE,NA,0.0611330323376202,TRUE
+"TVA","raw_net_import_ratio",3,TRUE,NA,FALSE,0.0611330323376202,FALSE

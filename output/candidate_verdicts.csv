@@ -1,0 +1,8 @@
+"node","candidate_role","primary_measure","baseline_holds","scenario_ok","threshold_ok","flow_ok","event_ok","near_coverage_gate","overall_status","robustness_flags"
+"TPWR","core_dependence","net_import_dependence",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,"ROBUST","EVENT_VARIABLE"
+"SCL","core_dependence","net_import_dependence",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,"ROBUST","EVENT_VARIABLE"
+"GCPD","core_direction_flip","raw_net_import_ratio",TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,"THRESHOLD_SENSITIVE","EVENT_VARIABLE"
+"AECI","core_direction_flip","raw_net_import_ratio",TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,"ROBUST","EVENT_VARIABLE"
+"TVA","coverage_sensitivity","net_import_dependence",TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,"ROBUST","NEAR_COVERAGE_GATE"
+"PNM","minor_confirmed_flip","raw_net_import_ratio",TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,"THRESHOLD_SENSITIVE","EVENT_VARIABLE"
+"PSCO","minor_confirmed_flip","raw_net_import_ratio",TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,"THRESHOLD_SENSITIVE","EVENT_VARIABLE"

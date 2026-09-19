@@ -1,0 +1,16 @@
+"node","name","layer","measure","scenario","weighted_stress_value","weighted_normal_value","weighted_difference","retained_stress_weight","positive_demand_coverage","resolved_flow_coverage","annual_demand_mwh","median_demand_mwh","maximum_demand_mwh"
+"GCPD","Public Utility District No. 2 of Grant County, Washington","ba","raw_net_import_ratio","mid",0.0240696098065253,-0.140025288012429,0.164094897818954,1,1,0.99851598173516,6739895,752,1053
+"AECI","Associated Electric Cooperative, Inc.","ba","raw_net_import_ratio","mid",0.0563107012939,-0.0762015529377894,0.132512254231689,1,1,0.979452054794521,22319643,2323.5,5758
+"TPWR","City of Tacoma, Department of Public Utilities, Light Division","ba","raw_net_import_ratio","mid",0.650215973653915,0.547287848655458,0.102928124998457,1,0.998401826484018,0.994178082191781,4531539,502,936
+"SCL","Seattle City Light","ba","raw_net_import_ratio","mid",0.586106166679982,0.497873307864989,0.0882328588149938,1,1,0.981050228310502,9474702,1059,1816
+"PNM","Public Service Company of New Mexico","ba","raw_net_import_ratio","mid",0.011096679287263,-0.0666563063041334,0.0777529855913965,1,1,0.999885844748858,14616645,1619,2736
+"TVA","Tennessee Valley Authority","ba","raw_net_import_ratio","mid",0.0997267478847928,0.0371248256641175,0.0626019222206752,1,1,0.91175799086758,170717598,18519.5,35086
+"ISNE","ISO New England","ba","raw_net_import_ratio","mid",0.0553789427836077,0.00150326987371101,0.0538756729098967,1,1,0.997488584474886,115265944,12920,25898
+"TAL","City of Tallahassee","ba","raw_net_import_ratio","mid",0.0627862241418696,0.00921466758109913,0.0535715565607704,1,1,0.999771689497717,2888059,309,623
+"IPCO","Idaho Power Company","ba","raw_net_import_ratio","mid",0.286722220498045,0.248543430186481,0.0381787903115643,1,1,1,18927864,2051,3932
+"PSCO","Public Service Company of Colorado","ba","raw_net_import_ratio","mid",0.00710816266413588,-0.0220819330154717,0.0291900956796075,1,0.999315068493151,0.999429223744292,45250779,5008,9079
+"NEVP","Nevada Power Company","ba","raw_net_import_ratio","mid",0.159560961824706,0.134510787717277,0.0250501741074295,1,0.99783105022831,1,40373048,4195,9239
+"GVL","Gainesville Regional Utilities","ba","raw_net_import_ratio","mid",0.228401497898704,0.204855681760701,0.0235458161380032,1,1,0.999313108185461,2151131,227,560
+"AZPS","Arizona Public Service Company","ba","raw_net_import_ratio","mid",0.378718458568615,0.36027516154273,0.018443297025885,1,0.999885844748858,0.986073059360731,38863315,4128,10529
+"WAUW","Western Area Power Administration - Upper Great Plains West","ba","raw_net_import_ratio","mid",0.590137560440556,0.575935377707826,0.0142021827327304,1,1,0.998059360730594,793908,88,158
+"PACW","PacifiCorp West","ba","raw_net_import_ratio","mid",0.729483360815989,0.718913299661618,0.0105700611543715,1,1,0.988812785388128,20338715,2320,4195

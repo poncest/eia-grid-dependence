@@ -1,0 +1,32 @@
+# --- Secrets: NEVER commit (EIA API key etc.) ---
+.Renviron
+.env
+
+# --- R / RStudio session cruft ---
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+
+# --- Regenerable data (large; rebuilt by the analysis scripts (04, 07, 08 pull from the API)) ---
+data-raw/
+data/
+
+# --- Quarto build artifacts ---
+/.quarto/
+/_site/
+/_freeze/
+*_files/
+
+# Tracked on purpose: analysis/  R/  output/  figures/  README.md
+
+*.gpkg
+*.shp
+fonts/
+docs/data_dictionary_skeleton.md
+
+*.gpkg
+*.shp
+fonts/
+docs/data_dictionary_skeleton.md
